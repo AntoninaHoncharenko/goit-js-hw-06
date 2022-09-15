@@ -11,7 +11,9 @@
 
 const inputRef = document.querySelector("#validation-input");
 
-const onInputClick = function (event) {
+inputRef.addEventListener("blur", onInputClick);
+
+function onInputClick(event) {
   const requeiredLength = Number(event.target.dataset.length);
   if (requeiredLength === event.target.value.length) {
     inputRef.classList.add("valid");
@@ -20,6 +22,4 @@ const onInputClick = function (event) {
     inputRef.classList.add("invalid");
     inputRef.classList.remuve("valid");
   }
-};
-
-inputRef.addEventListener("blur", onInputClick);
+}

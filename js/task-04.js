@@ -12,19 +12,19 @@ const valueRef = document.querySelector("#value");
 
 let counterValue = 0;
 
-const onBtnDecrementClick = (event) => {
-  counterValue -= 1;
-  valueRef.textContent = counterValue;
-};
-
 btnDecrementRef.addEventListener("click", onBtnDecrementClick);
 
-const onBtnIncrementClick = (event) => {
-  counterValue += 1;
+function onBtnDecrementClick(event) {
+  counterValue -= 1;
   valueRef.textContent = counterValue;
-};
+}
 
 btnIncrementRef.addEventListener("click", onBtnIncrementClick);
+
+function onBtnIncrementClick(event) {
+  counterValue += 1;
+  valueRef.textContent = counterValue;
+}
 
 // 2 варіант
 
