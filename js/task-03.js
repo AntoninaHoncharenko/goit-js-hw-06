@@ -32,10 +32,7 @@ const galeryItemsEl = images
   )
   .join("");
 
-galeryListRef.style.display = "flex";
-galeryListRef.style.justifyContent = "space-between";
-galeryListRef.style.listStyle = "none";
-galeryListRef.style.paddingLeft = "0";
+galeryListRef.classList.add("js-gallery");
 
 // console.log(galeryItemsEl);
 galeryListRef.insertAdjacentHTML("beforeend", galeryItemsEl);
