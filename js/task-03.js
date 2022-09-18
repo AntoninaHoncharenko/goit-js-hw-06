@@ -23,7 +23,6 @@ const images = [
 //     Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
 
 const galeryListRef = document.querySelector(".gallery");
-// console.log(galeryListRef);
 
 const galeryItemsEl = images
   .map(
@@ -34,5 +33,4 @@ const galeryItemsEl = images
 
 galeryListRef.classList.add("js-gallery");
 
-// console.log(galeryItemsEl);
 galeryListRef.insertAdjacentHTML("beforeend", galeryItemsEl);

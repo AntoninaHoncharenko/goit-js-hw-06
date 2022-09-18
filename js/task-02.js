@@ -21,7 +21,6 @@ const ingredients = [
 //     Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 
 const listRef = document.querySelector("#ingredients");
-console.log(listRef);
 
 const itemsEl = ingredients.map((ingredient) => {
   const itemEl = document.createElement("li");
