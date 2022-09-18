@@ -3,8 +3,8 @@ const buttonCreateRef = document.querySelector("[data-create]");
 const buttonDestroyRef = document.querySelector("[data-destroy]");
 const boxesRef = document.querySelector("#boxes");
 
-inputRef.addEventListener("change", (element) => {
-  return element.currentTarget.value;
+inputRef.addEventListener("change", (event) => {
+  return event.currentTarget.value;
 });
 
 function getRandomHexColor() {
