@@ -23,7 +23,8 @@ function createBoxes() {
     markup.push(markupEl);
   }
 
-  boxesRef.innerHTML = markup.join("");
+  markup.join("");
+  boxesRef.insertAdjacentHTML("beforeend", markup);
 }
 
 buttonDestroyRef.addEventListener("click", (event) => {
