@@ -7,9 +7,11 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-const markup = [];
+let amount = null;
 
 const createBoxes = (amount) => {
+  amount = Number(inputRef.value);
+  const markup = [];
   for (let i = 0; i < amount; i += 1) {
     const markupEl = `<div style="background-color:${getRandomHexColor()}; width:${
       30 + i * 10
@@ -19,10 +21,6 @@ const createBoxes = (amount) => {
 
   boxesRef.insertAdjacentHTML("beforeend", markup.join(""));
 };
-
-const amount = inputRef.value;
-
-createBoxes(amount);
 
 buttonCreateRef.addEventListener("click", createBoxes);
 
